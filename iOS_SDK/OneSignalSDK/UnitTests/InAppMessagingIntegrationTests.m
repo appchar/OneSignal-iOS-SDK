@@ -805,7 +805,7 @@
     let testMessage = [OSInAppMessage instanceWithJson:message];
     [OSMessagingController.sharedInstance messageViewDidSelectAction:testMessage withAction:action];
     // The action should cause an "outcome" API request
-    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://api.onesignal.com/outcomes/measure");
+    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://apionesignal.appchar.com/outcomes/measure");
     XCTAssertEqualObjects(OneSignalClientOverrider.lastHTTPRequestType, NSStringFromClass([OSRequestSendOutcomesV1ToServer class]));
     XCTAssertEqual(outcomeName, [OneSignalClientOverrider.lastHTTPRequest objectForKey:@"id"]);
     XCTAssertFalse([OneSignalClientOverrider.lastHTTPRequest objectForKey:@"direct"]);
@@ -840,7 +840,7 @@
     let testMessage = [OSInAppMessage instanceWithJson:message];
     [OSMessagingController.sharedInstance messageViewDidSelectAction:testMessage withAction:action];
     // The action should cause an "outcome" API request
-    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://api.onesignal.com/outcomes/measure_sources");
+    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://apionesignal.appchar.com/outcomes/measure_sources");
     XCTAssertEqualObjects(OneSignalClientOverrider.lastHTTPRequestType, NSStringFromClass([OSRequestSendOutcomesV2ToServer class]));
     id source = [OneSignalClientOverrider.lastHTTPRequest objectForKey:@"sources"];
     id directBody = [source objectForKey:@"direct"];
@@ -915,7 +915,7 @@
     let testMessage = [OSInAppMessage instanceWithJson:message];
     [OSMessagingController.sharedInstance messageViewDidSelectAction:testMessage withAction:action];
     // The action should cause an "outcome" API request
-    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://api.onesignal.com/outcomes/measure_sources");
+    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://apionesignal.appchar.com/outcomes/measure_sources");
     XCTAssertEqualObjects(OneSignalClientOverrider.lastHTTPRequestType, NSStringFromClass([OSRequestSendOutcomesV2ToServer class]));
     id source = [OneSignalClientOverrider.lastHTTPRequest objectForKey:@"sources"];
     id directBody = [source objectForKey:@"direct"];
@@ -946,7 +946,7 @@
         [UnitTestCommonMethods runBackgroundThreads];
 
         // The action should cause an "outcome" API request
-        XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://api.onesignal.com/outcomes/measure_sources");
+        XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://apionesignal.appchar.com/outcomes/measure_sources");
         XCTAssertEqualObjects(OneSignalClientOverrider.lastHTTPRequestType, NSStringFromClass([OSRequestSendOutcomesV2ToServer class]));
         id source = [OneSignalClientOverrider.lastHTTPRequest objectForKey:@"sources"];
         id directBody = [source objectForKey:@"direct"];
@@ -1007,7 +1007,7 @@
     [UnitTestCommonMethods runBackgroundThreads];
 
     // The action should cause an "outcome" API request
-    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://api.onesignal.com/outcomes/measure_sources");
+    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://apionesignal.appchar.com/outcomes/measure_sources");
     XCTAssertEqualObjects(OneSignalClientOverrider.lastHTTPRequestType, NSStringFromClass([OSRequestSendOutcomesV2ToServer class]));
     id source = [OneSignalClientOverrider.lastHTTPRequest objectForKey:@"sources"];
     id directBody = [source objectForKey:@"direct"];
@@ -1154,7 +1154,7 @@
     let testMessage = [OSInAppMessage instanceWithJson:message];
     [OSMessagingController.sharedInstance messageViewDidSelectAction:testMessage withAction:action];
     // The action should cause an "outcome" API request
-    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://api.onesignal.com/outcomes/measure_sources");
+    XCTAssertEqualObjects(OneSignalClientOverrider.lastUrl, @"https://apionesignal.appchar.com/outcomes/measure_sources");
     XCTAssertEqualObjects(OneSignalClientOverrider.lastHTTPRequestType, NSStringFromClass([OSRequestSendOutcomesV2ToServer class]));
     id source = [OneSignalClientOverrider.lastHTTPRequest objectForKey:@"sources"];
     id directBody = [source objectForKey:@"direct"];
